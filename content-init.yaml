@@ -10,5 +10,5 @@ spec:
         image: fabmedicalerol.azurecr.io/content-init:latest
         env:
         - name: MONGODB_CONNECTION
-          value: "mongodb://testfaberol:zaSyEYzlnii5TOOPXopfekgEFSJml1m2KTmOy9SGg73dex1JIgARhJZaJtPTtlwAF6nb1AUlwAGJnZRagEcBzQ%3D%3D@testfaberol.mongo.cosmos.azure.com:10255/contentdb?ssl=true&replicaSet=globaldb&retrywrites=false"
+          value: "xxx"
       restartPolicy: Never
