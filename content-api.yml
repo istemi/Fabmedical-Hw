@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: content-api
+  labels:
+    app: content-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: content-api
+  template:
+    metadata:
+      labels:
+        app: content-api
+    spec:
+      containers:
+      - name: content-api
+        image: fabmedicalerol.azurecr.io/content-api:latest
+        env:
+        - name: MONGODB_CONNECTION
+          valueFrom:
+            secretKeyRef:
+              name: cosmosdb
+              key: db
+        ports:
+        - containerPort: 3001
